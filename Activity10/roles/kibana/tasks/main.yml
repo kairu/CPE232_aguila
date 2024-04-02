@@ -1,0 +1,12 @@
+---
+# tasks file for kibana
+- name: Installing Kibana
+  apt:
+   name: kibana
+    
+- name: Start Kibana
+  systemd:
+    daemon_reload: true
+    name: kibana
+    state: started
+    enabled: yes

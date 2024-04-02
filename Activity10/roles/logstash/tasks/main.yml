@@ -1,0 +1,12 @@
+---
+# tasks file for logstash
+- name: Install logstash
+  apt:
+    name: logstash
+    state: present
+     
+- name: Start and enable Logstash
+  systemd:
+    name: logstash
+    state: started
+    enabled: yes
